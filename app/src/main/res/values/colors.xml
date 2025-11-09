@@ -1,0 +1,8 @@
+<resources>
+    <color name="bahia_blue">#0033A0</color>
+    <color name="bahia_blue_light">#0066CC</color>
+    <color name="bahia_red">#D50032</color>
+    <color name="bahia_white">#FFFFFF</color>
+    <color name="bahia_gray_dark">#212121</color>
+    <color name="bahia_gray_light">#F5F5F5</color>
+</resources>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bahia_blue"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/total_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total de Perguntas"
+        android:textColor="@color/bahia_white"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/bahia_white"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textAlignment="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/total_question" />
+
+    <ImageView
+        android:id="@+id/bahia_logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/question"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Escudo do Esporte Clube Bahia"
+        android:src="@drawable/simbolobahia"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter" />
+
+    <LinearLayout
+        android:id="@+id/choices_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bahia_logo"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:padding="8dp">
+
+    <Button
+        android:id="@+id/ans_A"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:backgroundTint="@color/bahia_white"
+        android:text="Alternativa A"
+        android:textColor="@color/bahia_blue"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/ans_B"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:backgroundTint="@color/bahia_white"
+        android:text="Alternativa B"
+        android:textColor="@color/bahia_blue"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/ans_C"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:backgroundTint="@color/bahia_white"
+        android:text="Alternativa C"
+        android:textColor="@color/bahia_blue"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/ans_D"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:backgroundTint="@color/bahia_white"
+        android:text="Alternativa D"
+        android:textColor="@color/bahia_blue"
+        android:textStyle="bold" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/choices_layout"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/bahia_red"
+        android:textColor="@color/bahia_white"
+        android:text="Confirmar"
+        android:textStyle="bold" />
+</RelativeLayout>

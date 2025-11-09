@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.MyQuizApplication" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primárias -->
+        <item name="colorPrimary">@color/bahia_blue</item>
+        <item name="colorPrimaryVariant">@color/bahia_blue_light</item>
+        <item name="colorOnPrimary">@color/bahia_white</item>
+
+        <!-- Secundárias -->
+        <item name="colorSecondary">@color/bahia_red</item>
+        <item name="colorSecondaryVariant">@color/bahia_red</item>
+        <item name="colorOnSecondary">@color/bahia_white</item>
+
+        <!-- Fundo e superfícies -->
+        <item name="android:colorBackground">@color/bahia_gray_light</item>
+        <item name="colorOnBackground">@color/bahia_gray_dark</item>
+        <item name="colorSurface">@color/bahia_white</item>
+        <item name="colorOnSurface">@color/bahia_gray_dark</item>
+
+        <!-- Status bar -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+        <!-- Ícones escuros quando fundo da status bar for claro -->
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>
