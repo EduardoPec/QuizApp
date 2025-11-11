@@ -12,7 +12,7 @@ class PerguntasRespostasQuiz {
             "Qual era a capacidade aproximada da antiga Fonte Nova antes da reforma para se tornar a Arena Fonte Nova?",
             "Qual goleiro defendeu o Bahia na final do Campeonato Brasileiro de 1988?",
             "Em que ano o Bahia disputou a Copa Libertadores da América pela primeira vez?",
-            "Quantos gols o Bahia marcou na goleada histórica sobre o Vitória no Campeonato Baiano de 2019?"
+            "Quantos gols o Bahia marcou na maior goleada da história do clássico BaVi??"
     };
 
     public static String alternativas[][] = {
@@ -25,7 +25,7 @@ class PerguntasRespostasQuiz {
             {"45 mil", "55 mil", "80 mil", "100 mil"},
             {"Ronaldo", "Sidmar", "Emerson Ferretti", "Rodolfo Rodrigues"},
             {"1961", "1989", "1990", "1960"},
-            {"3", "4", "5", "6"}
+            {"5", "4", "7", "10"}
     };
 
     public static String respostasCorretas[] = {
@@ -34,10 +34,10 @@ class PerguntasRespostasQuiz {
             "Bahia",
             "Beira-Rio",
             "Evaristo de Macedo",
-            "Bobô",
+            "Charles",
             "80 mil",
-            "Sidmar",
+            "Ronaldo",
             "1960",
-            "5"
+            "10"
     };
 }

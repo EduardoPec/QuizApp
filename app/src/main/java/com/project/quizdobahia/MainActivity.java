@@ -56,6 +56,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (botaoClicado.getId() == R.id.submit_btn) {
 
+            if (respostaSelecionada.isEmpty()) {
+                new AlertDialog.Builder(this)
+                        .setTitle("Atenção")
+                        .setMessage("Por favor, selecione uma resposta antes de confirmar.")
+                        .setPositiveButton("OK", null)
+                        .show();
+                return;
+            }
+
             if (respostaSelecionada.equals(PerguntasRespostasQuiz.respostasCorretas[indicePerguntaAtual])) {
                 pontuacao++;
             }
@@ -66,6 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else {
             respostaSelecionada = botaoClicado.getText().toString();
             botaoClicado.setBackgroundColor(Color.BLUE);
+
         }
     }
 
@@ -74,6 +84,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             finalizarQuiz();
             return;
         }
+
+        respostaSelecionada= "";
+
+        respostaA.setBackgroundColor(Color.WHITE);
+        respostaB.setBackgroundColor(Color.WHITE);
+        respostaC.setBackgroundColor(Color.WHITE);
+        respostaD.setBackgroundColor(Color.WHITE);
 
         textoPergunta.setText(PerguntasRespostasQuiz.perguntas[indicePerguntaAtual]);
         respostaA.setText(PerguntasRespostasQuiz.alternativas[indicePerguntaAtual][0]);
@@ -101,6 +118,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     void reiniciarQuiz() {
         pontuacao = 0;
         indicePerguntaAtual = 0;
+
         carregarNovaPergunta();
     }
 
