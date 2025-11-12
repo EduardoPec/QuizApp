@@ -65,12 +65,48 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 return;
             }
 
-            if (respostaSelecionada.equals(PerguntasRespostasQuiz.respostasCorretas[indicePerguntaAtual])) {
+            botaoResponder.setEnabled(false);
+            respostaA.setEnabled(false);
+            respostaB.setEnabled(false);
+            respostaC.setEnabled(false);
+            respostaD.setEnabled(false);
+
+            String respostaCorreta = PerguntasRespostasQuiz.respostasCorretas[indicePerguntaAtual];
+
+            if (respostaA.getText().toString().equals(respostaCorreta)) {
+                respostaA.setBackgroundColor(Color.GREEN);
+            } else if (respostaB.getText().toString().equals(respostaCorreta)) {
+                respostaB.setBackgroundColor(Color.GREEN);
+            } else if (respostaC.getText().toString().equals(respostaCorreta)) {
+                respostaC.setBackgroundColor(Color.GREEN);
+            } else if (respostaD.getText().toString().equals(respostaCorreta)) {
+                respostaD.setBackgroundColor(Color.GREEN);
+            }
+
+            if (!respostaSelecionada.equals(respostaCorreta)) {
+                if (respostaA.getText().toString().equals(respostaSelecionada)) {
+                    respostaA.setBackgroundColor(Color.RED);
+                } else if (respostaB.getText().toString().equals(respostaSelecionada)) {
+                    respostaB.setBackgroundColor(Color.RED);
+                } else if (respostaC.getText().toString().equals(respostaSelecionada)) {
+                    respostaC.setBackgroundColor(Color.RED);
+                } else if (respostaD.getText().toString().equals(respostaSelecionada)) {
+                    respostaD.setBackgroundColor(Color.RED);
+                }
+            } else {
                 pontuacao++;
             }
 
-            indicePerguntaAtual++;
-            carregarNovaPergunta();
+            new android.os.Handler(android.os.Looper.getMainLooper()).postDelayed(() -> {
+                indicePerguntaAtual++;
+
+                botaoResponder.setEnabled(true);
+                respostaA.setEnabled(true);
+                respostaB.setEnabled(true);
+                respostaC.setEnabled(true);
+                respostaD.setEnabled(true);
+                carregarNovaPergunta();
+            }, 1000);
 
         } else {
             respostaSelecionada = botaoClicado.getText().toString();
